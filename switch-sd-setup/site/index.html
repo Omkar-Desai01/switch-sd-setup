@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Switch SD Setup</title>
+<meta name="description" content="Build, update and repair an Atmosphere and hekate SD card for the Nintendo Switch from one safe Windows app.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d2433; --muted: #5a6475; --card: #f5f7fb; --line: #e3e8f0;
+    --accent: #e60012; --accent-fg: #ffffff; --link: #0b57d0; --coffee: #ffdd00; --coffee-fg: #1d2433;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f131a; --fg: #e8ecf3; --muted: #9aa5b8; --card: #171c26; --line: #262e3d; --link: #8ab4f8; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--link); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header.nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  .brand { font-weight: 700; font-size: 18px; }
+  .nav a { text-decoration: none; margin-left: 18px; color: var(--muted); }
+  .hero { text-align: center; padding: 40px 0 24px; }
+  .hero h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+  .hero p.lead { font-size: 20px; color: var(--muted); max-width: 680px; margin: 0 auto 28px; }
+  .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: var(--accent-fg); }
+  .btn.coffee { background: var(--coffee); color: var(--coffee-fg); }
+  .btn.ghost { border: 1px solid var(--line); color: var(--fg); }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .shot { margin: 36px auto 8px; max-width: 920px; }
+  .shot img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line);
+              box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18); }
+  h2 { font-size: 28px; margin: 56px 0 18px; letter-spacing: -0.01em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); }
+  ol.steps { padding-left: 22px; } ol.steps li { margin: 8px 0; }
+  ul.safe { padding-left: 20px; } ul.safe li { margin: 6px 0; }
+  .banner { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+            border-radius: 8px; padding: 14px 18px; margin-top: 28px; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  footer p { max-width: 760px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <span class="brand">Switch SD Setup</span>
+    <nav>
+      <a href="https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup">GitHub</a>
+      <a href="https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/blob/main/docs/USAGE.md">Docs</a>
+      <a href="https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/blob/main/CHANGELOG.md">Changelog</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Set up your Switch SD card<br>without the guesswork</h1>
+    <p class="lead">One Windows app to build, update and repair an Atmosphere and hekate card. It checks everything,
+      backs up before it changes anything, and can undo an update.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/releases/latest">Download for Windows</a>
+      <a class="btn coffee" href="https://buymeacoffee.com/ok_27">Buy me a coffee</a>
+      <a class="btn ghost" href="https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup">View source</a>
+    </div>
+    <p class="note">Free and open source (MIT). Beta: please keep a backup of anything you care about.</p>
+    <div class="shot"><img src="screenshot.png" alt="Switch SD Setup finding a damaged Atmosphere file on a card"></div>
+  </section>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><h3>Set up a new card</h3><p>Backs the card up, optionally formats it, installs Atmosphere, hekate, Sphaira and tools from their official releases, verifies it, and hands you a checklist for the console.</p></div>
+    <div class="card"><h3>Update what you have</h3><p>Finds out which version of each part is on the card, even if you built it by hand. Snapshots first, updates only what is behind, and rolls back with one click.</p></div>
+    <div class="card"><h3>Fix a card that broke</h3><p>Reads crash reports, checks firmware against your Atmosphere version, checks the emuMMC and your NAND backup, and runs a clean-boot test without deleting anything.</p></div>
+    <div class="card"><h3>Works when GitHub does not</h3><p>Keeps saved known-good copies of every component, hash-checked before use, and falls back to them automatically.</p></div>
+  </div>
+
+  <h2>Three steps</h2>
+  <ol class="steps">
+    <li>Download the zip from the latest release and open <strong>SwitchSDSetup.exe</strong>.</li>
+    <li>Pick your card and press <strong>Dry run</strong>. It shows every step and changes nothing.</li>
+    <li>Press <strong>Set up this card</strong>, then follow the saved checklist on the console.</li>
+  </ol>
+
+  <h2>Safe by design</h2>
+  <ul class="safe">
+    <li>Only removable drives can be formatted; the system drive and the drive the app runs from are always refused.</li>
+    <li>A format needs a fresh verified backup of that exact card and a typed confirmation.</li>
+    <li>Updates save what they overwrite first. Clean-boot renames folders; nothing is deleted.</li>
+    <li>Downloads come from each project's GitHub releases and are checked against the published SHA-256.</li>
+    <li>No telemetry. The only network calls are to GitHub.</li>
+  </ul>
+  <div class="banner">This tool does not include or help with signature patches, game downloads, keys or firmware.
+    It is for setting up your own console.</div>
+
+  <footer>
+    <p>Switch SD Setup is an independent project and is not affiliated with, endorsed by or sponsored by Nintendo.
+      "Nintendo Switch" is a trademark of Nintendo. It installs the work of Atmosphère, hekate, Sphaira, Checkpoint,
+      nxdumptool, Goldleaf, JKSV and the 90DNS tester, which keep their own licenses.</p>
+    <p>MIT licensed. <a href="https://buymeacoffee.com/ok_27">Buy me a coffee</a> if it saved you time.</p>
+  </footer>
+</div>
+</body>
+</html>
