@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Build output
+build/
+dist/
+release/
+*.spec
+
+# Saved third-party releases are created locally with `sdsetup vault update`; never commit them
+vault/*
+!vault/README.md
+
+# Local files
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

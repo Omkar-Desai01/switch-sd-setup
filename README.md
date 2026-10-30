@@ -1,1 +1,0 @@
-# switch-sd-setup

@@ -1,0 +1,114 @@
+{
+  "components": [
+    {
+      "id": "atmosphere",
+      "name": "Atmosphere",
+      "repo": "Atmosphere-NX/Atmosphere",
+      "asset": "^atmosphere-.*\\.zip$",
+      "kind": "zip",
+      "default": true
+    },
+    {
+      "id": "hekate",
+      "name": "hekate + Nyx",
+      "repo": "CTCaer/hekate",
+      "asset": "^hekate_ctcaer_[\\d.]+_Nyx_[\\d.]+\\.zip$",
+      "kind": "zip",
+      "default": true,
+      "redirect": {
+        "from": "^hekate_ctcaer_[\\d.]+\\.bin$",
+        "to": ["payload.bin", "atmosphere/reboot_payload.bin"]
+      }
+    },
+    {
+      "id": "sphaira",
+      "name": "Sphaira (hbmenu replacement)",
+      "repo": "ITotalJustice/sphaira",
+      "asset": "^sphaira\\.zip$",
+      "kind": "zip",
+      "default": true
+    },
+    {
+      "id": "checkpoint",
+      "name": "Checkpoint (save backup)",
+      "repo": "FlagBrew/Checkpoint",
+      "asset": "^Checkpoint\\.nro$",
+      "kind": "file",
+      "dest": "switch/Checkpoint/Checkpoint.nro",
+      "default": true
+    },
+    {
+      "id": "nxdumptool",
+      "name": "nxdumptool (dump your own games, saves, tickets)",
+      "repo": "DarkMatterCore/nxdumptool",
+      "asset": "^nxdumptool\\.nro$",
+      "kind": "file",
+      "dest": "switch/nxdumptool/nxdumptool.nro",
+      "default": true
+    },
+    {
+      "id": "goldleaf",
+      "name": "Goldleaf (installer / file manager)",
+      "repo": "XorTroll/Goldleaf",
+      "asset": "^Goldleaf\\.nro$",
+      "kind": "file",
+      "dest": "switch/Goldleaf/Goldleaf.nro",
+      "default": false
+    },
+    {
+      "id": "jksv",
+      "name": "JKSV (save backup)",
+      "repo": "J-D-K/JKSV",
+      "asset": "^JKSV\\.nro$",
+      "kind": "file",
+      "dest": "switch/JKSV/JKSV.nro",
+      "default": false
+    },
+    {
+      "id": "dns_tester",
+      "name": "90DNS Tester",
+      "repo": "meganukebmp/Switch_90DNS_tester",
+      "asset": "^Switch_90DNS_tester\\.nro$",
+      "kind": "file",
+      "dest": "switch/Switch_90DNS_tester.nro",
+      "default": true
+    }
+  ],
+  "manual": [
+    {
+      "id": "lockpick_rcm",
+      "name": "Lockpick_RCM (dump your own prod.keys)",
+      "note": "GitHub blocks the Lockpick_RCM repository (DMCA, 2023), so this tool cannot download it. Obtain it yourself and place Lockpick_RCM.bin in the bootloader/payloads folder, or skip it if you already have your own prod.keys."
+    }
+  ],
+  "layout": {
+    "dirs": [
+      "atmosphere",
+      "atmosphere/config",
+      "atmosphere/config_templates",
+      "atmosphere/fatal_errors",
+      "atmosphere/hosts",
+      "bootloader",
+      "bootloader/ini",
+      "bootloader/payloads",
+      "bootloader/res",
+      "switch"
+    ],
+    "files": [
+      "atmosphere/package3",
+      "atmosphere/stratosphere.romfs",
+      "atmosphere/reboot_payload.bin",
+      "atmosphere/hosts/emummc.txt",
+      "bootloader/hekate_ipl.ini",
+      "bootloader/update.bin",
+      "payload.bin",
+      "hbmenu.nro",
+      "switch/sphaira/sphaira.nro"
+    ]
+  },
+  "volatile": [
+    "atmosphere/reboot_payload.bin",
+    "bootloader/update.bin",
+    "payload.bin"
+  ]
+}

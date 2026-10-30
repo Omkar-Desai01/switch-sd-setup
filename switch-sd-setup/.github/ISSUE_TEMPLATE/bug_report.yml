@@ -1,0 +1,57 @@
+name: Bug report
+description: Something did not work, or the tool did something unexpected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Please do not attach or paste** `prod.keys`, firmware files, game files, or your console
+        serial number. Remove them from any log before posting.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `sdsetup.exe --version`, or the release you downloaded
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did it happen?
+      options:
+        - Desktop app
+        - Command line
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Plugged in a 64 GB card
+        2. Pressed "Update / check versions"
+        3. ...
+  - type: textarea
+    id: log
+    attributes:
+      label: Log output
+      description: Copy the text from the log pane or terminal.
+      render: text
+  - type: input
+    id: card
+    attributes:
+      label: Card and reader (optional)
+      placeholder: "SanDisk 128 GB exFAT, built-in laptop reader"
+  - type: checkboxes
+    id: backup
+    attributes:
+      label: Data loss
+      options:
+        - label: This report involves data being lost or overwritten (it will be treated as high priority)
