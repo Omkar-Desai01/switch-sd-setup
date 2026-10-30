@@ -4,13 +4,14 @@
 
 **Build, update and repair an Atmosphere + hekate SD card for the Nintendo Switch, safely, from one Windows app.**
 
-[![CI](https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/actions/workflows/ci.yml)
-[![Latest release](https://img.shields.io/github/v/release/YOUR-GITHUB-USERNAME/switch-sd-setup?include_prereleases&label=release)](https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/releases/latest)
+<a href="https://buymeacoffee.com/ok_27"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-ok__27-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
+
+[![CI](https://github.com/Omkar-Desai01/switch-sd-setup/actions/workflows/ci.yml/badge.svg)](https://github.com/Omkar-Desai01/switch-sd-setup/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/Omkar-Desai01/switch-sd-setup?include_prereleases&label=release)](https://github.com/Omkar-Desai01/switch-sd-setup/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Platform: Windows](https://img.shields.io/badge/platform-Windows-0078D6)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ok__27-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ok_27)
 
-[**Download**](https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/releases/latest) ·
+[**Download**](https://github.com/Omkar-Desai01/switch-sd-setup/releases/latest) ·
 [Usage guide](docs/USAGE.md) ·
 [How it works](docs/HOW_IT_WORKS.md) ·
 [Changelog](CHANGELOG.md)
@@ -37,7 +38,7 @@ does the boring and risky parts for you.
 
 ## Quick start
 
-1. Download `SwitchSDSetup-<version>-windows.zip` from the [latest release](https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup/releases/latest)
+1. Download `SwitchSDSetup-<version>-windows.zip` from the [latest release](https://github.com/Omkar-Desai01/switch-sd-setup/releases/latest)
    and unzip it anywhere (not onto the SD card).
 2. Put the SD card in a card reader and open **`SwitchSDSetup.exe`**.
 3. Pick the card, press **Dry run** to see every step without changing anything, then **Set up this card**.
@@ -99,7 +100,7 @@ versions or direct downloads; set the `GITHUB_TOKEN` environment variable to lif
 Python 3.10 or newer, no runtime dependencies.
 
 ```bash
-git clone https://github.com/YOUR-GITHUB-USERNAME/switch-sd-setup.git
+git clone https://github.com/Omkar-Desai01/switch-sd-setup.git
 cd switch-sd-setup
 python -m unittest discover -s tests      # run the tests
 python -m sdsetup gui                     # run the desktop app
@@ -111,9 +112,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow.
 
 ## Support the project
 
-Switch SD Setup is free and open source. If it saved you an evening, you can say thanks:
-
-<a href="https://buymeacoffee.com/ok_27"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-ok__27-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
+Switch SD Setup is free and open source. If it saved you an evening, you can
+[buy me a coffee](https://buymeacoffee.com/ok_27) (the button is at the top of this page).
 
 Bug reports from real hardware, pull requests and a star on the repository help just as much.
 

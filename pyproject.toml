@@ -19,6 +19,12 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/Omkar-Desai01/switch-sd-setup"
+Issues = "https://github.com/Omkar-Desai01/switch-sd-setup/issues"
+Changelog = "https://github.com/Omkar-Desai01/switch-sd-setup/blob/main/CHANGELOG.md"
+Funding = "https://buymeacoffee.com/ok_27"
+
 [project.scripts]
 sdsetup = "sdsetup.cli:main"
 
